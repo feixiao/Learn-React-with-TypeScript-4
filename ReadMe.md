@@ -11,6 +11,8 @@ Creating a class component.
 
 ### chapter04
 
+Routing with React Router.
+
 ### LearnReactWithTypeScript3
 
 - [《Learn-React-with-TypeScript-3》](https://github.com/PacktPublishing/Learn-React-with-TypeScript-3)
