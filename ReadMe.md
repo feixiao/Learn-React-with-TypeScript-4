@@ -1,15 +1,15 @@
 # Learn React with TypeScript
 
-## Samples
+### Samples
 
 - React 16.x
 - TypeScript 4.x
 
-### chapter03
+#### chapter03
 
 Creating a class component.
 
-### chapter04
+#### chapter04
 
 Routing with React Router.
 
