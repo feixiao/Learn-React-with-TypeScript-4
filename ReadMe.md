@@ -13,6 +13,10 @@ Creating a class component.
 
 Routing with React Router.
 
+#### chapter08
+
+React Redux.
+
 ### LearnReactWithTypeScript3
 
 - [《Learn-React-with-TypeScript-3》](https://github.com/PacktPublishing/Learn-React-with-TypeScript-3)
