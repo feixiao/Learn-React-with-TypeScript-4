@@ -3,14 +3,37 @@ import logo from "./logo.svg";
 import "./App.css";
 import Confirm from "./Confirm";
 
+interface IState {
+  confirmOpen: boolean;
+  confirmMessage: string;
+}
 //function App() {
-class App extends React.Component {
+class App extends React.Component<{}, IState> {
+  constructor(props: {}) {
+    super(props);
+    this.state = {
+      confirmMessage: "Please hit the confirm button",
+      confirmOpen: true,
+    };
+  }
+
+  private handleConfirmClick = () => {
+    this.setState({ confirmOpen: true });
+  };
   private handleCancelConfirmClick = () => {
     console.log("Cancel clicked");
+    this.setState({
+      confirmMessage: "Take a break, I'm sure you will later...",
+      confirmOpen: false,
+    });
   };
 
   private handleOkConfirmClick = () => {
     console.log("Ok clicked");
+    this.setState({
+      confirmMessage: "Cool, carry on reading!",
+      confirmOpen: false,
+    });
   };
 
   /**
@@ -33,7 +56,10 @@ class App extends React.Component {
             Learn React
           </a>
         </header>
+        <p>{this.state.confirmMessage}</p>
+        <button onClick={this.handleConfirmClick}>Confirm</button>
         <Confirm
+          open={this.state.confirmOpen}
           title="React and TypeScript"
           content="Are you sure you want to learn React and TypeScript?"
           onCancelClick={this.handleCancelConfirmClick}
