@@ -15,8 +15,8 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import Header from "./Header";
 import ProductsPage from "./ProductsPage";
 import ProductPage from "./ProductPage";
-// import LoginPage from "./LoginPage";
 import NotFoundPage from "./NotFoundPage";
+import LoginPage from "./LoginPage";
 const AdminPage = React.lazy(() => import("./AdminPage"));
 
 const RoutesWrap: React.FunctionComponent = () => {
@@ -28,7 +28,7 @@ const RoutesWrap: React.FunctionComponent = () => {
 };
 
 const Routes: React.FunctionComponent<RouteComponentProps> = (props) => {
-  const [loggedIn] = React.useState(true);
+  const [loggedIn] = React.useState(false);
   return (
     <div>
       <Header />
@@ -53,7 +53,7 @@ const Routes: React.FunctionComponent<RouteComponentProps> = (props) => {
                 <Redirect to="/login" />
               )}
             </Route>
-            {/* <Route path="/login" component={LoginPage} /> */}
+            <Route path="/login" component={LoginPage} />
             <Route component={NotFoundPage} />
           </Switch>
         </CSSTransition>
