@@ -34,10 +34,10 @@ const reducer = (state: ILikeState = initialLikeState, action: LikeActions) => {
     case LikeActionTypes.LIKE:
       return { ...state, likes: state.likes + 1, lastLike: action.now };
   }
-  return state;
+  // return state;
 };
 
-const Product: React.SFC<IProps> = (props) => {
+const Product: React.FunctionComponent<IProps> = (props) => {
   const [{ likes, lastLike }, dispatch]: [
     ILikeState,
     (action: ILikeAction) => void

@@ -15,6 +15,7 @@ interface IProps extends RouteComponentProps<{ id: string }> {
   added: boolean;
 }
 
+// ProductPage需要数据展示的组件
 class ProductPage extends React.Component<IProps> {
   public componentDidMount() {
     if (this.props.match.params.id) {
